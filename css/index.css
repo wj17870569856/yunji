@@ -1,0 +1,85 @@
+/* 顶部 */
+.top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: rgb(255, 81, 0);
+}
+.top .item {
+    cursor: pointer;
+    color: #fff;
+    position: relative;
+}
+.top .item:hover {
+    color: rgb(229, 255, 0);
+}
+.top .position {
+    position: relative;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+}
+.top .position img {
+    width: 10px;
+    margin-right: 6px;
+}
+.top .service::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -16px;
+    width: 0;
+    height: 0;
+    transform: translateY(-50%);
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 8px solid #fff;
+}
+.top .web::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -16px;
+    width: 0;
+    height: 0;
+    transform: translateY(-50%);
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 8px solid #fff;
+}
+
+/* 搜索 */
+.search {
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+}
+.search .logo {
+    width: 100px;
+}
+.search .input-wraper {
+    width: 86%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 30px;
+    border: 2px solid rgb(255, 81, 0);
+    border-radius: 20px;
+    overflow: hidden;
+}
+.search .input-wraper .input-left {
+    width: 90%;
+}
+.search .input-wraper img {
+    width: 20px;
+}
+.search .input-wraper input {
+    /* width: 80%; */
+}
+.search .input-wraper .btn {
+    padding: 0 20px;
+    height: 100%;
+    background-color: rgb(255, 81, 0);
+}
