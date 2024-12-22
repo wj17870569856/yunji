@@ -1,4 +1,83 @@
+/* 通用重置 */
+html, body, div, span {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* 设置全局盒模型 */
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+
+/* 全局基础样式 */
+html, body {
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    
+}
+
+/* 文本链接 */
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+a:hover {
+    color: #007bff;
+}
+
+/* 列表 */
+ul, ol , li{
+    list-style: none;
+}
+
+/* 图片 */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 表单元素 */
+input, select, textarea, button {
+    font: inherit;
+    color: inherit;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+textarea {
+    resize: none;
+}
+
+button {
+    cursor: pointer;
+}
+.header .active{
+    color: rgb(229, 255, 0);
+  }
+
+
+/* 通用布局工具类 */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+

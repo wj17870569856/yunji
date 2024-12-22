@@ -9,19 +9,19 @@
 </head>
 <body>
     <!-- 顶部 -->
-    <div class="top">
+    <div class="header">
         <div class="item position">
             <img src="./assets/top/position.png" alt="">
             <span>重庆</span>
         </div>
-        <div class="item">
-            首页
+        <div class="item active">
+            <a href="./index.html">首页</a>
         </div>
         <div class="item">
-            分类
+            <a href="./html/category.html">分类</a>
         </div>
         <div class="item">
-            购物车
+            <a href="./html/car.html">购物车</a>
         </div>
         <div class="item">
             我的订单
@@ -33,19 +33,425 @@
             网站导航
         </div>
         <div class="item">
-            免费注册
+            <a href="./html/login.html">免费注册</a>
         </div>
     </div>
-    <!-- 搜索 -->
-    <div class="search">
-        <img class="logo" src="./assets/search/logo.png" alt="">
-        <div class="input-wraper">
-            <div class="input-left">
-                <img src="./assets/search/search.png" alt="">
-                <input type="text" placeholder="小米耳机">
+    <div>
+        <ul class="side">
+            <li>
+                <img src="./assets/fixed/联系客服.png" alt="">
+                <div>联系客服</div>
+            </li>
+            <li>
+                <img src="./assets/fixed/购物车.png" alt="">
+                <div>购物车</div>
+            </li>
+            <li>
+                <img src="./assets/fixed/反馈.png" alt="">
+                <div>反馈</div>
+            </li><li>
+                <img src="./assets/fixed/举报.png" alt="">
+                <div>举报</div>
+            </li><li>
+                <img src="./assets/fixed/回顶部.png" alt="">
+                <div>回顶部</div>
+            </li>
+        </ul>
+    </div>
+    
+    <div class="">
+        <!-- 搜索 -->
+        <div class="search">
+            <img class="logo" src="./assets/search/logo.png" alt="">
+            <div class="input-wraper">
+                <div class="input-left">
+                    <img src="./assets/search/search.png" alt="">
+                    <input type="text" placeholder="小米耳机">
+                </div>
+                <div class="btn">搜索</div>
             </div>
-            <div class="btn">搜索</div>
         </div>
+        <div class="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active"><img src="./assets/banner/滚动横图.png" alt="Image 1"></div>
+                <div class="carousel-item"><img src="./assets/banner/滚动横图.png" alt="Image 2"></div>
+                <div class="carousel-item"><img src="./assets/banner/滚动横图.png" alt="Image 3"></div>
+            </div>
+            <div class="carousel-dots"></div>
+        </div>
+        <!-- 模块分类 -->
+        <div class="main1">
+            <div class="item">
+                <img src="./assets/acyivity/大牌专场.png" alt="">
+                <div>大牌专用</div>
+            </div>
+            <div class="item">
+                <img src="./assets/acyivity/特卖集市.png" alt="">
+                <div>特卖集市</div>
+            </div>
+            <div class="item">
+                <img src="./assets/acyivity/云农场.png" alt="">
+                <div>云农场</div>
+            </div>
+            <div class="item">
+                <img src="./assets/acyivity/红包签到.png" alt="">
+                <div>红包签到</div>
+            </div>
+            <div class="item">
+                <img src="./assets/acyivity/万人团.png" alt="">
+                <div>万人团</div>
+            </div>
+            <div class="item">
+                <img src="./assets/acyivity/省钱月卡.png" alt="">
+                <div>省钱月卡</div>
+            </div>
+            <div class="item">
+                <img src="./assets/acyivity/百亿补贴.png" alt="">
+                <div>百亿补贴</div>
+            </div>
+            <div class="item">
+                <img src="./assets/acyivity/U先试用.png" alt="">
+                <div>U先试用</div>
+            </div>
+        </div>
+        <!-- 精选好物 --> 
+         <div class="main2">
+            <div class="top">
+                <span class="title">精选好物</span>
+                <span class="time">
+                    <span>00</span> : <span>40</span> : <span>59</span>
+                </span>
+            </div>
+            <div class="bottom">
+                <div class="item">
+                    <img src="./assets/good/1.jpg" alt="">
+                    <div class="new">¥ 1499.0</div>
+                    <del class="old">¥ 1268.0</del>
+                </div>
+                <div class="item">
+                    <img src="./assets/good/2.jpg" alt="">
+                    <div class="new">¥ 1499.0</div>
+                    <del class="old">¥ 1268.0</del>
+                </div>
+                <div class="item">
+                    <img src="./assets/good/3.jpg" alt="">
+                    <div class="new">¥ 1499.0</div>
+                    <del class="old">¥ 1268.0</del>
+                </div>
+                <div class="item">
+                    <img src="./assets/good/4.jpg" alt="">
+                    <div class="new">¥ 1499.0</div>
+                    <del class="old">¥ 1268.0</del>
+                    <div class="btn">
+                        立即抢购 &gt;
+                    </div>
+                </div>
+            </div>
+         </div>
+         <!-- 分类 -->
+         <div class="main3">
+            <ul class="top">
+                <li>推荐</li>
+                <li>美妆个护</li>
+                <li class="active">服装衣帽</li>
+                <li>箱鞋表饰</li>
+                <li>母婴健康</li>
+                <li>
+                    <a href="./html/category.html"><img src="./assets/close/更多类别图标.png" alt=""></a>
+                    
+                </li>
+            </ul>
+            <div id="good-list"></div>
+            <div class="main3-fotter">
+                <div class="btn-1">&lt; 上一页</div>
+                <div class="btn-2">下一页 &gt;</div>
+                <div class="btn-3">
+                    首页
+                </div>
+            </div>
+         </div>
+         <div class="line-with-text">
+            <div class="line"></div>
+            <span>更多活动</span>
+            <div class="line"></div>
+          </div>
+          <div id="main4">
+            
+
+          </div>
+
+
+
+         <div class="footer">
+            <div class="top">
+                <ul>
+                    <li>购物指南</li>
+                    <li>购物流程</li>
+                    <li>会员介绍</li>
+                    <li>常见问题</li>
+                    <li>联系客服</li>
+                </ul>
+                <ul>
+                    <li>配送方式</li>
+                    <li>上门自提</li>
+                    <li>限时达</li>
+                    <li>配送服务查询</li>
+                    <li>配送费收取标准</li>
+                </ul>
+                <ul>
+                    <li>支付方式</li>
+                    <li>货到付款</li>
+                    <li>在线支付</li>
+                    <li>分期付款</li>
+                    <li>公司转账</li>
+                </ul>
+                <ul>
+                    <li>售后服务</li>
+                    <li>售后政策</li>
+                    <li>价格保护</li>
+                    <li>退改说明</li>
+                    <li>返修/退换货</li>
+                    <li>取消订单</li>
+                </ul>
+
+            </div>
+           
+            <ul class="bottom">
+                <li>关于我们</li>|
+                <li>联系我们</li>|
+                <li>联系客服</li>|
+                <li>合作招商</li>|
+                <li>商家帮助</li>|
+                <li>营销中心</li>|
+                <li>手机云市</li>
+            </ul>
+            <ul class="bottom">
+                <li>友情链接</li>|
+                <li>销售联盟</li>|
+                <li>云市社区</li>|
+                <li>风险监测</li>|
+                <li>质量公告</li>|
+                <li>隐私政策</li>|
+                <li>云市公益</li>
+            </ul>
+         </div>
+       
     </div>
 </body>
 </html>
+<script>
+
+
+// 渲染 分类 HTML 模板
+const container = document.getElementById("good-list");
+let html = ""; // 保存生成的 HTML 字符串
+const  goodsList = [
+  {
+    title:'花小肆 小众设计感学院风显',
+    url:'../assets/close/1.jpg',
+    price: '￥96',
+    num: '已售10+',
+    tab:'',
+    tip:'',
+  },{
+    title:'奶系甜辣假两件麻花针织衫',
+    url:'../assets/close/2.jpg',
+    price: '￥75',
+    num: '已售50+',
+    tab:'',
+    tip:'',
+  },{
+    title:'设计师的礼物原创樱花集国',
+    url:'../assets/close/3.jpg',
+    price: '',
+    num: '',
+    tab:'',
+    tip:'满300减30',
+  },{
+    title:'INSstudios 糖果彩点肌理',
+    url:'../assets/close/4.jpg',
+    price: '￥99',
+    num: '已售1000+',
+    tab:'国货日',
+    tip:'满300减30',
+  },{
+    title:'夏日热卖]御茶家甜心奶',
+    url:'../assets/close/5.jpg',
+    price: '￥138',
+    num: '已售200+',
+    tab:'',
+    tip:'',
+  },{
+    title:'甜辣妹纯欲紫木耳边衬衫上',
+    url:'../assets/close/6.jpg',
+    price: '￥129',
+    num: '已售1000+',
+    tab:'国货日',
+    tip:'每300减30',
+  }, 
+  {
+  title:'不规则网纱吊带辣妹修身',
+  url:'../assets/close/7.jpg',
+  price: '￥78',
+  num: '已售20+',
+  tab:'国货日',
+  tip:'每300减30',
+},{
+    title:'JEEP SPIRIT羽绒棉服女秋',
+    url:'../assets/close/8.jpg',
+    price: '￥99',
+  num: '已售50+',
+  tab:'国货日',
+  tip:'每300减30',
+  },{
+    title:'[雾岛秋] jk毛呢牛角扣大衣',
+    url:'../assets/close/9.jpg',
+    price: '￥99',
+    num: '已售50+',
+    tab:'国货日',
+    tip:'每300减30',
+  },
+]
+for (let i = 0; i < goodsList.length; i++) {
+  html += `
+    <div class="item">
+        <a href="./html/detail.html">
+        <div class="detail">
+            <img src="${goodsList[i].url}" alt="${goodsList[i].title}" />
+            <div class="info">
+                    <div class="title">${goodsList[i].title}</div>
+                <div>
+                    <span class="tab">${goodsList[i].tab}</span>
+                    <span class="tip">${goodsList[i].tip}</span>
+                </div>
+                <div>
+                    <span class="price">${goodsList[i].price}</span>
+                    <span class="num">${goodsList[i].num}</span>
+                </div>
+            </div>
+                </div>
+                  </a>
+    </div>
+  `;
+}
+// 将生成的 HTML 插入到容器中
+container.innerHTML = html;
+
+
+// 渲染 更多活动
+const more = document.getElementById("main4");
+let str = ""; // 保存生成的 HTML 字符串
+const  list = [
+  {
+    title:'满200减30 满300减50',
+    url:'./assets/more/1.jpg',
+  },
+  {
+    title:'50券免费领',
+    url:'./assets/more/2.jpg',
+  },
+  {
+    title:'满250减30 满300减50',
+    url:'./assets/more/3.jpg',
+  },
+  {
+    title:'回力户外出行',
+    url:'./assets/more/4.jpg',
+  },
+  {
+    title:'半亩花田2.2折 满250减30 满300减5',
+    url:'./assets/more/5.jpg',
+  },
+  {
+    title:'宅家必囤好物',
+    url:'./assets/more/6.jpg',
+  },
+  {
+    title:'康夫个护家电',
+    url:'./assets/more/7.jpg',
+  },
+  {
+    title:'5.6折九阳厨房电器',
+    url:'./assets/more/8.jpg',
+  },
+  {
+    title:'峰花头发护理',
+    url:'./assets/more/9.jpg',
+  },
+
+
+
+]
+for (let i = 0; i < list.length; i++) {
+  str += `
+    <div class="item">
+        <img src="${list[i].url}" alt="${list[i].title}" />
+        <div class="title">${list[i].title}</div>
+    </div>
+  `;
+}
+// 将生成的 HTML 插入到容器中
+more.innerHTML = str;
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 轮播图
+document.addEventListener("DOMContentLoaded", function () {
+  const carouselInner = document.querySelector(".carousel-inner");
+  const items = document.querySelectorAll(".carousel-item");
+  const dotsContainer = document.querySelector(".carousel-dots");
+  let currentIndex = 0;
+
+  // Generate dots
+  items.forEach((_, index) => {
+    const dot = document.createElement("button");
+    dot.classList.add("dot");
+    if (index === 0) dot.classList.add("active");
+    dotsContainer.appendChild(dot);
+
+    // Add click event to dot
+    dot.addEventListener("click", () => {
+      currentIndex = index;
+      updateCarousel();
+    });
+  });
+
+  const dots = document.querySelectorAll(".carousel-dots .dot");
+
+  // Function to update the active slide and dot
+  function updateCarousel() {
+    // Update slide
+    const offset = -currentIndex * 100;
+    carouselInner.style.transform = `translateX(${offset}%)`;
+
+    // Update active dot
+    dots.forEach((dot, index) => {
+      dot.classList.toggle("active", index === currentIndex);
+    });
+  }
+
+  // Auto-play functionality
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % items.length;
+    updateCarousel();
+  }
+
+  let autoPlay = setInterval(nextSlide, 3000);
+
+  // Pause on hover
+  const carousel = document.querySelector(".carousel");
+  carousel.addEventListener("mouseenter", () => clearInterval(autoPlay));
+  carousel.addEventListener("mouseleave", () => (autoPlay = setInterval(nextSlide, 3000)));
+});
+
+</script>

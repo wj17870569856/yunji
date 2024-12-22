@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>yunji</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+   <!-- 顶部 -->
+   <div class="header">
+    <div class="item position">
+        <img src="../assets/top/position.png" alt="">
+        <span>重庆</span>
+    </div>
+      <div class="item">
+        <a href="../index.html">首页</a>
+      </div>
+    <div class="item active">
+        <a href="./category.html">分类</a>
+    </div>
+    <div class="item">
+        <a href="./car.html">购物车</a>
+      </div>
+    <div class="item">
+        我的订单
+    </div>
+    <div class="item service">
+        客户服务
+    </div>
+    <div class="item web">
+        网站导航
+    </div>
+    <div class="item">
+        <a href="./login.html">免费注册</a>
+    </div>
+</div>
+
+  <div class="main3">
+    <ul class="top">
+        <li>推荐</li>
+        <li>美妆个护</li>
+        <li class="active">服装衣帽</li>
+        <li>箱鞋表饰</li>
+        <li>母婴健康</li>
+        <li>
+            <a href="./html/category.html"><img src="./assets/close/更多类别图标.png" alt=""></a>
+            
+        </li>
+    </ul>
+    <div id="good-list"></div>
+    <div class="main3-fotter">
+        <div class="btn-1">&lt; 上一页</div>
+        <div class="btn-2">下一页 &gt;</div>
+        <div class="btn-3">
+            首页
+        </div>
+    </div>
+ </div>
+</body>
+</html>
+<script>
+  // 渲染 分类 HTML 模板
+const container = document.getElementById("good-list");
+let html = ""; // 保存生成的 HTML 字符串
+const  goodsList = [
+  {
+    title:'花小肆 小众设计感学院风显',
+    url:'../assets/close/1.jpg',
+    price: '￥96',
+    num: '已售10+',
+    tab:'',
+    tip:'',
+  },{
+    title:'奶系甜辣假两件麻花针织衫',
+    url:'../assets/close/2.jpg',
+    price: '￥75',
+    num: '已售50+',
+    tab:'',
+    tip:'',
+  },{
+    title:'设计师的礼物原创樱花集国',
+    url:'../assets/close/3.jpg',
+    price: '',
+    num: '',
+    tab:'',
+    tip:'满300减30',
+  },{
+    title:'INSstudios 糖果彩点肌理',
+    url:'../assets/close/4.jpg',
+    price: '￥99',
+    num: '已售1000+',
+    tab:'国货日',
+    tip:'满300减30',
+  },{
+    title:'夏日热卖]御茶家甜心奶',
+    url:'../assets/close/5.jpg',
+    price: '￥138',
+    num: '已售200+',
+    tab:'',
+    tip:'',
+  },{
+    title:'甜辣妹纯欲紫木耳边衬衫上',
+    url:'../assets/close/6.jpg',
+    price: '￥129',
+    num: '已售1000+',
+    tab:'国货日',
+    tip:'每300减30',
+  }, 
+  {
+  title:'不规则网纱吊带辣妹修身',
+  url:'../assets/close/7.jpg',
+  price: '￥78',
+  num: '已售20+',
+  tab:'国货日',
+  tip:'每300减30',
+},{
+    title:'JEEP SPIRIT羽绒棉服女秋',
+    url:'../assets/close/8.jpg',
+    price: '￥99',
+  num: '已售50+',
+  tab:'国货日',
+  tip:'每300减30',
+  },{
+    title:'[雾岛秋] jk毛呢牛角扣大衣',
+    url:'../assets/close/9.jpg',
+    price: '￥99',
+    num: '已售50+',
+    tab:'国货日',
+    tip:'每300减30',
+  },{
+    title:'花小肆 小众设计感学院风显',
+    url:'../assets/close/1.jpg',
+    price: '￥96',
+    num: '已售10+',
+    tab:'',
+    tip:'',
+  },{
+    title:'奶系甜辣假两件麻花针织衫',
+    url:'../assets/close/2.jpg',
+    price: '￥75',
+    num: '已售50+',
+    tab:'',
+    tip:'',
+  },{
+    title:'设计师的礼物原创樱花集国',
+    url:'../assets/close/3.jpg',
+    price: '',
+    num: '',
+    tab:'',
+    tip:'满300减30',
+  },{
+    title:'INSstudios 糖果彩点肌理',
+    url:'../assets/close/4.jpg',
+    price: '￥99',
+    num: '已售1000+',
+    tab:'国货日',
+    tip:'满300减30',
+  },{
+    title:'夏日热卖]御茶家甜心奶',
+    url:'../assets/close/5.jpg',
+    price: '￥138',
+    num: '已售200+',
+    tab:'',
+    tip:'',
+  },{
+    title:'甜辣妹纯欲紫木耳边衬衫上',
+    url:'../assets/close/6.jpg',
+    price: '￥129',
+    num: '已售1000+',
+    tab:'国货日',
+    tip:'每300减30',
+  }, 
+  {
+  title:'不规则网纱吊带辣妹修身',
+  url:'../assets/close/7.jpg',
+  price: '￥78',
+  num: '已售20+',
+  tab:'国货日',
+  tip:'每300减30',
+},{
+    title:'JEEP SPIRIT羽绒棉服女秋',
+    url:'../assets/close/8.jpg',
+    price: '￥99',
+  num: '已售50+',
+  tab:'国货日',
+  tip:'每300减30',
+  },{
+    title:'[雾岛秋] jk毛呢牛角扣大衣',
+    url:'../assets/close/9.jpg',
+    price: '￥99',
+    num: '已售50+',
+    tab:'国货日',
+    tip:'每300减30',
+  },
+  {
+    title:'花小肆 小众设计感学院风显',
+    url:'../assets/close/1.jpg',
+    price: '￥96',
+    num: '已售10+',
+    tab:'',
+    tip:'',
+  },{
+    title:'奶系甜辣假两件麻花针织衫',
+    url:'../assets/close/2.jpg',
+    price: '￥75',
+    num: '已售50+',
+    tab:'',
+    tip:'',
+  },{
+    title:'设计师的礼物原创樱花集国',
+    url:'../assets/close/3.jpg',
+    price: '',
+    num: '',
+    tab:'',
+    tip:'满300减30',
+  },{
+    title:'INSstudios 糖果彩点肌理',
+    url:'../assets/close/4.jpg',
+    price: '￥99',
+    num: '已售1000+',
+    tab:'国货日',
+    tip:'满300减30',
+  },{
+    title:'夏日热卖]御茶家甜心奶',
+    url:'../assets/close/5.jpg',
+    price: '￥138',
+    num: '已售200+',
+    tab:'',
+    tip:'',
+  },{
+    title:'甜辣妹纯欲紫木耳边衬衫上',
+    url:'../assets/close/6.jpg',
+    price: '￥129',
+    num: '已售1000+',
+    tab:'国货日',
+    tip:'每300减30',
+  }, 
+  {
+  title:'不规则网纱吊带辣妹修身',
+  url:'../assets/close/7.jpg',
+  price: '￥78',
+  num: '已售20+',
+  tab:'国货日',
+  tip:'每300减30',
+},{
+    title:'JEEP SPIRIT羽绒棉服女秋',
+    url:'../assets/close/8.jpg',
+    price: '￥99',
+  num: '已售50+',
+  tab:'国货日',
+  tip:'每300减30',
+  },{
+    title:'[雾岛秋] jk毛呢牛角扣大衣',
+    url:'../assets/close/9.jpg',
+    price: '￥99',
+    num: '已售50+',
+    tab:'国货日',
+    tip:'每300减30',
+  },
+]
+for (let i = 0; i < goodsList.length; i++) {
+  html += `
+  
+    <div class="item">
+      <a href="detail.html">
+      <div class="detail">
+              <img src="${goodsList[i].url}" alt="${goodsList[i].title}" />
+            <div class="info">
+                    <div class="title">${goodsList[i].title}</div>
+                <div>
+                    <span class="tab">${goodsList[i].tab}</span>
+                    <span class="tip">${goodsList[i].tip}</span>
+                </div>
+                <div>
+                    <span class="price">${goodsList[i].price}</span>
+                    <span class="num">${goodsList[i].num}</span>
+                </div>
+            </div>
+                </div>
+                </a>
+                
+    </div>
+    
+  `;
+}
+// 将生成的 HTML 插入到容器中
+container.innerHTML = html;
+</script>
+<style>
+  *{
+    margin:0;
+  }
+  a{
+    color:inherit;
+    text-decoration: none;
+  }
+  .main3 {
+  margin:40px 20px;
+    border-radius: 20px;
+    background: #f0eeee;
+    padding:30px 0;
+
+}
+.main3 .top{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom:20px;
+  font-size:24px;
+  color:#6b6969;
+}
+.main3 .top li{
+  
+  display: flex;
+  justify-content: center;
+  padding-bottom: 4px;
+}
+.main3 .top .active{
+  color: black;
+  border-bottom:4px solid rgb(255, 81, 0);
+
+}
+.main3 .top li img{
+  width:30%;
+}
+.main3 #good-list {
+  display: flex;
+  flex-wrap: wrap;
+  
+  padding:20px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.main3 #good-list .item{
+  width:33%;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  
+}
+.main3 #good-list .item a{
+  width:100%;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  
+}
+.main3 #good-list .item .detail{
+  width:70%;
+  height:575px;
+  margin: 10px 0;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+
+}
+.main3 #good-list .info{
+  padding:15px;
+}
+.main3 #good-list .item img{
+  width:100%;
+flex:1;
+}
+
+.main3 #good-list .item .title{
+  font-size:24px;
+}
+.main3 #good-list .item .tab{
+  font-size:20px;
+  color:#e72076;
+}
+.main3 #good-list .item .tip{
+  font-size:16px;
+  color:orange;
+}
+.main3 #good-list .item .price{
+  font-size:30px;
+  color:rgb(255, 81, 0);
+}
+.main3 #good-list .item .num{
+  font-size:18px;
+  color:#ccc;
+}
+
+.main3-fotter{
+  width:450px;
+  margin:20px auto;
+  display: flex;
+  justify-content: space-around;
+    align-items: center;
+}
+.main3-fotter div{
+  width:120px;
+  height:50px;
+  line-height:50px;
+  font-size:20px;
+  border-radius: 10px;
+  text-align: center;
+ }
+ .main3-fotter .btn-1{
+  background: #d8d6d6;
+  color:#747171;
+ }
+ .main3-fotter .btn-2{
+  background: #fff;
+  color:#333;
+ }
+ .main3-fotter .btn-3{
+  background: #d8d6d6;
+  color:#747171;
+ }
+
+
+
+
+/* 顶部 */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(255, 81, 0);
+  padding: 20px 10%;
+}
+
+.header .item {
+  cursor: pointer;
+  color: #fff;
+  position: relative;
+}
+
+.header .item a{
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+.header .item:hover {
+  color: rgb(229, 255, 0);
+}
+.header .active{
+  color: rgb(229, 255, 0);
+}
+.header .item a:hover{
+  color: rgb(229, 255, 0);
+}
+.header .position {
+  position: relative;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+}
+.header .position img {
+  width: 10px;
+  margin-right: 6px;
+}
+.header .service::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -16px;
+  width: 0;
+  height: 0;
+  transform: translateY(-50%);
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 8px solid #fff;
+}
+.header .web::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -16px;
+  width: 0;
+  height: 0;
+  transform: translateY(-50%);
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 8px solid #fff;
+}
+</style>

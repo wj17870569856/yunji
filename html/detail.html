@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>yunji</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+   <!-- 顶部 -->
+   <div class="header">
+    <div class="item position">
+        <img src="./assets/top/position.png" alt="">
+        <span>重庆</span>
+    </div>
+    <div class="item">
+      <a href="../index.html">首页</a>
+    </div>
+  <div class="item active">
+      <a href="./category.html">分类</a>
+  </div>
+  <div class="item">
+      <a href="./car.html">购物车</a>
+    </div>
+  <div class="item">
+      我的订单
+  </div>
+  <div class="item service">
+      客户服务
+  </div>
+  <div class="item web">
+      网站导航
+  </div>
+  <div class="item">
+      <a href="./login.html">免费注册</a>
+  </div>
+</div>
+
+  <div class="main">
+    <div class="detail">
+      <ul>
+        <li>商品图片</li>
+        <li>商品名称</li>
+        <li>价格</li>
+        <li>销量</li>
+        <li>质量</li>
+        <li>活动</li>
+      </ul>
+      <ul>
+        <li><img src="../assets/close/1.jpg" alt=""></li>
+        <li>花小肆 小众设计感学院风显年轻</li>
+        <li>¥96</li>
+        <li>已售100+</li>
+        <li>纯棉、不褶皱</li>
+        <li>满300减50</li>
+      </ul>
+    </div>
+    <div class="btn"><a href="./car.html">加入购物车</a></div>
+  </div>
+</div>
+</body>
+</html>
+<script>
+ 
+</script>
+<style>
+  * {
+    margin:0;
+  }
+
+  .main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #f7f5f5;
+}
+.main .detail{
+  background: #f6c4bfab;
+  width:60%;
+  border-radius: 30px;
+  padding:30px;
+  display: flex;
+  justify-content: space-around;
+}
+ 
+ul,li{
+  margin: 0;
+  padding:0;
+  list-style: none;
+}
+.main .detail li{
+  font-size:24px;
+  height:60px;
+  line-height:60px;
+  color:#504f4f
+}
+.main .detail li:first-child{
+  height:200px;
+  line-height:200px;
+}
+.main .detail li img{ 
+  width: 150px;
+}
+.main .detail li img{ 
+  width: 150px;
+}
+
+
+.btn{
+  width:250px;
+  height:60px;
+  line-height:60px;
+  margin:50px auto;
+  border-radius: 30px;
+  background: rgb(255, 81, 0);
+  text-align: center;
+}
+.btn a{
+  font-size:30px;
+  color:#fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+.btn a:hover{
+  color:rgb(229, 255, 0);
+}
+
+
+
+
+
+
+
+
+/* 顶部 */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(255, 81, 0);
+  padding: 20px 10%;
+}
+
+.header .item {
+  cursor: pointer;
+  color: #fff;
+  position: relative;
+}
+
+.header .item a{
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+.header .item:hover {
+  color: rgb(229, 255, 0);
+}
+.header .active{
+  color: rgb(229, 255, 0);
+}
+
+.header .item a:hover{
+  color: rgb(229, 255, 0);
+}
+.header .position {
+  position: relative;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+}
+.header .position img {
+  width: 10px;
+  margin-right: 6px;
+}
+.header .service::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -16px;
+  width: 0;
+  height: 0;
+  transform: translateY(-50%);
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 8px solid #fff;
+}
+.header .web::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -16px;
+  width: 0;
+  height: 0;
+  transform: translateY(-50%);
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 8px solid #fff;
+}
+</style>
